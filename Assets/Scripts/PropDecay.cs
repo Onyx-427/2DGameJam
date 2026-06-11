@@ -1,30 +1,41 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class PropDecay : MonoBehaviour
 {
     private int interactionCount;
+    public bool readyForChange = false;
+
+    [SerializeField] private GameObject firstSprite;
+    [SerializeField] private GameObject secondSprite;
+    [SerializeField] private int spriteNum;
+
 
     private void Start()
     {
+
+        firstSprite?.SetActive(true);
+        secondSprite?.SetActive(false);
+
         interactionCount = 0;
+        readyForChange = false;
     }
-    // Update is called once per frame
-    void Update()
+    
+
+    public void ReadyForChange()
     {
+        readyForChange = true;
+
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            interactionCount++;
-            Decay();
-        }
-    }
 
-    private void Decay()
+
+    public IEnumerator SpriteChange()
     {
-        Debug.Log(interactionCount);
+        yield return new WaitForSeconds(2f);
+        firstSprite?.SetActive(false);
+        secondSprite?.SetActive(true);
     }
 }
