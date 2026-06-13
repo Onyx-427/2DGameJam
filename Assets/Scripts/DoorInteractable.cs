@@ -6,6 +6,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     [SerializeField] private Transform cameraSpawn;
     [SerializeField] private Transform playerSpawn;
     [SerializeField] private GameObject mainCam;
+    [SerializeField] private Camera cam;
     private GameObject player;
 
     
@@ -22,10 +23,22 @@ public class DoorInteractable : MonoBehaviour, IInteractable
         {
             player.transform.position = playerSpawn.position;
         }
+        if (gameObject.name == "MainDoorL")
+        {
+            cam.orthographicSize = 6.7f;
+        }
+        if (gameObject.name == "Party-Main" || gameObject.name == "BR-Main")
+        {
+            cam.orthographicSize = 4.5f;
+        }
+        if (gameObject.name == "MainDoorR")
+        {
+            cam.orthographicSize = 7.7f;
+        }
     }
 
-    public string GetInteractPrompt()
+    public void GetInteractPrompt()
     {
-        return null;
+        
     }
 }

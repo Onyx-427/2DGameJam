@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e3f6755a7ef65544c886aba4fa0aa936
+guid: 77a98be6e8da6754fb23b4d8e6607089
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8139198431983403247
-    second: running-to-the-side-3_0
+      213: 7389396851191715164
+    second: standing-forward 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: running-to-the-side-3_0
+      name: standing-forward 1_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 2
-        width: 19
-        height: 27
+        x: 6
+        y: 1
+        width: 20
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe089ceb9dd34f070800000000000000
-      internalID: 8139198431983403247
+      spriteID: c551ca319496c8660800000000000000
+      internalID: 7389396851191715164
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      running-to-the-side-3_0: 8139198431983403247
+      standing-forward 1_0: 7389396851191715164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

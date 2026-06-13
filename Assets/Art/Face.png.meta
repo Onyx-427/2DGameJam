@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c07b107f5bf7a144facce1145d3c5c9b
+guid: c557a08a09509c54b8443017b2d58797
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7314751135112400581
-    second: standing-forward_0
+      213: -9201241512177023075
+    second: Face_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: standing-forward_0
+      name: Face_0
       rect:
         serializedVersion: 2
         x: 6
-        y: 2
+        y: 10
         width: 20
-        height: 28
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b317d3b0998cc7a90800000000000000
-      internalID: -7314751135112400581
+      spriteID: d974c1e489f9e4080800000000000000
+      internalID: -9201241512177023075
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      standing-forward_0: -7314751135112400581
+      Face_0: -9201241512177023075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

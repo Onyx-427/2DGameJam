@@ -9,6 +9,7 @@ public class PlayerInteraction : MonoBehaviour
     public IInteractable currentInteractable;
     private IInteractable lastInteractable;
 
+    [SerializeField] private GameObject talkingUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +26,8 @@ public class PlayerInteraction : MonoBehaviour
             if (currentInteractable.canInteract(gameObject))
             {
                 currentInteractable.Interact(gameObject);
+
+                
             }
         }
 
@@ -75,15 +78,9 @@ public class PlayerInteraction : MonoBehaviour
             PropDecay decay = other.GetComponent<PropDecay>();
             if (decay != null && decay.readyForChange)
             {
-                Debug.Log("readyForChange = " + decay.readyForChange);
-                Debug.Log("Sprite Changing");
                 decay.StartCoroutine(decay.SpriteChange());
             }
-            else
-            {
-                Debug.Log("No prop decay or not ready for change");
-            }
-            
+            talkingUI.SetActive(false);
         }
     }
 

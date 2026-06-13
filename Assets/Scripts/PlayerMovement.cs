@@ -17,28 +17,43 @@ public class PlayerMovement : MonoBehaviour
         transform.position += (Vector3)moveDirection * speed * Time.deltaTime;
 
 
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mousePosition - (Vector2)transform.position;
-        
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        //Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //Vector2 direction = mousePosition - (Vector2)transform.position;
 
-        if (angle == 0)
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        animator.SetBool("WalkingLeft", false);
+        animator.SetBool("WalkingRight", false);
+        animator.SetBool("WalkingUp", false);
+        animator.SetBool("WalkingDown", false);
+
+        if (x == 0 && y == 0)
         {
-            Debug.Log("looking right");
+            //danimator.SetBool("IdleSide", true);
         }
-        if (angle == 90)
+
+        else if (Mathf.Abs(x) > Mathf.Abs(y))
         {
-            Debug.Log("looking up");
+            if (x < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, -180, 0);
+                animator.SetBool("WalkingLeft", true);
+            }
+            else
+            { 
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                animator.SetBool("WalkingRight", true);
+            }
+            
         }
-        if (angle == 180)
+
+        else
         {
-            Debug.Log("looking left");
+            if (y > 0) animator.SetBool("WalkingUp", true);
+            else if (y < 0) animator.SetBool("WalkingDown", true);
         }
-        if (angle == 270)
-        {
-            Debug.Log("looking down");
-        }
+
     }
 
     

@@ -12,9 +12,9 @@ public class PropInteraction : MonoBehaviour, IInteractable
         //some ui stuff maybe
     }
 
-    public string GetInteractPrompt()
+    public void GetInteractPrompt()
     {
-        return null;
+        
     }
 
 }

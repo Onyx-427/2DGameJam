@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 66edbab45af361d4e956269f30fb8b95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8276139298042955848
+    second: items.party-room-oficial_0
+  - first:
+      213: 179315208345589931
+    second: items.party-room-oficial_1
+  - first:
+      213: 9108540999463659663
+    second: items.party-room-oficial_2
+  - first:
+      213: 1453303385103235910
+    second: items.party-room-oficial_3
+  - first:
+      213: -4025093211845180060
+    second: items.party-room-oficial_4
+  - first:
+      213: -1422009129121215981
+    second: items.party-room-oficial_5
+  - first:
+      213: -4177828117239121659
+    second: items.party-room-oficial_6
+  - first:
+      213: -1721327308657472769
+    second: items.party-room-oficial_7
+  - first:
+      213: 6299782585006983348
+    second: items.party-room-oficial_8
+  - first:
+      213: -7966399934471534055
+    second: items.party-room-oficial_9
+  - first:
+      213: 2099838167725279644
+    second: items.party-room-oficial_10
+  - first:
+      213: -2186872380934622158
+    second: items.party-room-oficial_11
+  - first:
+      213: -5892446421478873306
+    second: items.party-room-oficial_12
+  - first:
+      213: -2356334695577609716
+    second: items.party-room-oficial_13
+  - first:
+      213: 1916898825537274060
+    second: items.party-room-oficial_14
+  - first:
+      213: 4552864202086882144
+    second: items.party-room-oficial_15
+  - first:
+      213: 8808482261350513477
+    second: items.party-room-oficial_16
+  - first:
+      213: 721048438402841641
+    second: items.party-room-oficial_17
+  - first:
+      213: -3321891903261310259
+    second: items.party-room-oficial_18
+  - first:
+      213: -2181936222106679081
+    second: items.party-room-oficial_19
+  - first:
+      213: 2659197512954570628
+    second: items.party-room-oficial_20
+  - first:
+      213: -3140546114832539895
+    second: items.party-room-oficial_21
+  - first:
+      213: -9118943215939180907
+    second: items.party-room-oficial_22
+  - first:
+      213: 7198750373640548736
+    second: items.party-room-oficial_23
+  - first:
+      213: 1317027923537846621
+    second: items.party-room-oficial_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: items.party-room-oficial_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 123
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7bf74482f352d80800000000000000
+      internalID: -8276139298042955848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 123
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba893406b3e0d7200800000000000000
+      internalID: 179315208345589931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 123
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88ec17a7c9086e70800000000000000
+      internalID: 9108540999463659663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 123
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b73f39abb2b2410800000000000000
+      internalID: 1453303385103235910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 123
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465c128bc0ff328c0800000000000000
+      internalID: -4025093211845180060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 123
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a0e5f2b32044ce0800000000000000
+      internalID: -1422009129121215981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 123
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509b253667f5506c0800000000000000
+      internalID: -4177828117239121659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 123
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaca49ceed9c18e0800000000000000
+      internalID: -1721327308657472769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_8
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 123
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8888522e25d6750800000000000000
+      internalID: 6299782585006983348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 123
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a0127a779a17190800000000000000
+      internalID: -7966399934471534055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_10
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 123
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99821920bf142d10800000000000000
+      internalID: 2099838167725279644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 90
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2347745f72ba6a1e0800000000000000
+      internalID: -2186872380934622158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_12
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 96
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627eabdf233d93ea0800000000000000
+      internalID: -5892446421478873306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_13
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 94
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a1b2a241e9c4fd0800000000000000
+      internalID: -2356334695577609716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 94
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0438e53513a9a10800000000000000
+      internalID: 1916898825537274060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_15
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 96
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b1bf3aed50f2f30800000000000000
+      internalID: 4552864202086882144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_16
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 96
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b702682f30e3a70800000000000000
+      internalID: 8808482261350513477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_17
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 84
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92cf9d40cbda10a00800000000000000
+      internalID: 721048438402841641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_18
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 90
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc20dd30ae446e1d0800000000000000
+      internalID: -3321891903261310259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 45
+        width: 88
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d806cef09438b1e0800000000000000
+      internalID: -2181936222106679081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_20
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 33
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487624b8c0e57e420800000000000000
+      internalID: 2659197512954570628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_21
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 39
+        width: 124
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f5ca8a2f98a64d0800000000000000
+      internalID: -3140546114832539895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_22
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 14
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596acf69571037180800000000000000
+      internalID: -9118943215939180907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 14
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0813e8ff25917e360800000000000000
+      internalID: 7198750373640548736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items.party-room-oficial_24
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 14
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d516eb52be5074210800000000000000
+      internalID: 1317027923537846621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      items.party-room-oficial_0: -8276139298042955848
+      items.party-room-oficial_1: 179315208345589931
+      items.party-room-oficial_10: 2099838167725279644
+      items.party-room-oficial_11: -2186872380934622158
+      items.party-room-oficial_12: -5892446421478873306
+      items.party-room-oficial_13: -2356334695577609716
+      items.party-room-oficial_14: 1916898825537274060
+      items.party-room-oficial_15: 4552864202086882144
+      items.party-room-oficial_16: 8808482261350513477
+      items.party-room-oficial_17: 721048438402841641
+      items.party-room-oficial_18: -3321891903261310259
+      items.party-room-oficial_19: -2181936222106679081
+      items.party-room-oficial_2: 9108540999463659663
+      items.party-room-oficial_20: 2659197512954570628
+      items.party-room-oficial_21: -3140546114832539895
+      items.party-room-oficial_22: -9118943215939180907
+      items.party-room-oficial_23: 7198750373640548736
+      items.party-room-oficial_24: 1317027923537846621
+      items.party-room-oficial_3: 1453303385103235910
+      items.party-room-oficial_4: -4025093211845180060
+      items.party-room-oficial_5: -1422009129121215981
+      items.party-room-oficial_6: -4177828117239121659
+      items.party-room-oficial_7: -1721327308657472769
+      items.party-room-oficial_8: 6299782585006983348
+      items.party-room-oficial_9: -7966399934471534055
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
