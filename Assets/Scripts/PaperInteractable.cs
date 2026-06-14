@@ -13,7 +13,7 @@ public class PaperInteractable : MonoBehaviour, IInteractable
     public void Interact(GameObject interactor)
     {
         isInteracted = !isInteracted;
-        talkingScript.ShowText("Ugh I have such a bad headache, why am I still here? ... I should investigate.");
+        talkingScript.StartDialogue(new string[] { "There's something really weird going on here... you should explore" });
     }
 
     public void GetInteractPrompt()

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ArcadeInteraction : MonoBehaviour, IInteractable
+public class BookshelfInteractable : MonoBehaviour, IInteractable
 {
     public bool isInteracted;
     [SerializeField] private TalkingScript talkingScript;
@@ -14,11 +14,11 @@ public class ArcadeInteraction : MonoBehaviour, IInteractable
         isInteracted = !isInteracted;
         if (propDecay.spriteChanged)
         {
-            talkingScript.StartDialogue( new string[] { "Ummmm..... wasn't there two arcade machines here?" });
+            talkingScript.StartDialogue(new string[] { "WOAH... okay when did this bookshelf fall... this is getting creepy now..." });
         }
         else
         {
-            talkingScript.StartDialogue ( new string[] { "Nice arcade machines... " });
+            talkingScript.StartDialogue(new string[] { "Hmm... these bookshelves are full of potions and elixers" });
         }
     }
 

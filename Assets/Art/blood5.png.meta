@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 02d84750deaf1764a94923b9b3e63c95
+guid: ac1cb607c9d32fa419f5660e40da2334
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5913738696227704600
-    second: flashlight_0
+      213: 3648351638623251154
+    second: blood5_0
+  - first:
+      213: 7968817603675790727
+    second: blood5_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flashlight_0
+      name: blood5_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 10
-        width: 21
-        height: 12
+        x: 0
+        y: 5
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e0bdd4fcfd2eeda0800000000000000
-      internalID: -5913738696227704600
+      spriteID: 2da6adb4c7c81a230800000000000000
+      internalID: 3648351638623251154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood5_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d99f2d36de69e60800000000000000
+      internalID: 7968817603675790727
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flashlight_0: -5913738696227704600
+      blood5_0: 3648351638623251154
+      blood5_1: 7968817603675790727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

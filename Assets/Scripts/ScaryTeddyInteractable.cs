@@ -1,24 +1,24 @@
 using UnityEngine;
 
-public class ArcadeInteraction : MonoBehaviour, IInteractable
+public class ScaryTeddyInteractable : MonoBehaviour, IInteractable
 {
     public bool isInteracted;
     [SerializeField] private TalkingScript talkingScript;
     [SerializeField] private PropDecay propDecay;
     public bool canInteract(GameObject interactor)
     {
-        return true;
+        if (propDecay.spriteChanged)
+        {
+            return true;
+        }
+        return false;
     }
     public void Interact(GameObject interactor)
     {
         isInteracted = !isInteracted;
         if (propDecay.spriteChanged)
         {
-            talkingScript.StartDialogue( new string[] { "Ummmm..... wasn't there two arcade machines here?" });
-        }
-        else
-        {
-            talkingScript.StartDialogue ( new string[] { "Nice arcade machines... " });
+            talkingScript.StartDialogue(new string[] { "OH MY- WHAT THE HELL IS THAT... there's something wrong here, this was NOT here before..." });
         }
     }
 

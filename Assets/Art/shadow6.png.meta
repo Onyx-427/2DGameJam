@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 02d84750deaf1764a94923b9b3e63c95
+guid: 6ea8bbef779388b4aaae26f3f7f04622
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5913738696227704600
-    second: flashlight_0
+      213: 5481936353432044591
+    second: shadow6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flashlight_0
+      name: shadow6_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 10
-        width: 21
-        height: 12
+        x: 2
+        y: 0
+        width: 29
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e0bdd4fcfd2eeda0800000000000000
-      internalID: -5913738696227704600
+      spriteID: f240e93a110c31c40800000000000000
+      internalID: 5481936353432044591
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flashlight_0: -5913738696227704600
+      shadow6_0: 5481936353432044591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

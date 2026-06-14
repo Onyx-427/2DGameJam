@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ArcadeInteraction : MonoBehaviour, IInteractable
+public class WhiteBunnyInteractable : MonoBehaviour, IInteractable
 {
     public bool isInteracted;
     [SerializeField] private TalkingScript talkingScript;
@@ -14,11 +14,11 @@ public class ArcadeInteraction : MonoBehaviour, IInteractable
         isInteracted = !isInteracted;
         if (propDecay.spriteChanged)
         {
-            talkingScript.StartDialogue( new string[] { "Ummmm..... wasn't there two arcade machines here?" });
+            talkingScript.StartDialogue( new string[] { "uhh.. didn't the plush look a little different before?" });
         }
         else
         {
-            talkingScript.StartDialogue ( new string[] { "Nice arcade machines... " });
+            talkingScript.StartDialogue( new string[] { "Cute bunny plush... " });
         }
     }
 

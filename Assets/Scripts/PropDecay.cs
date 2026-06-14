@@ -6,10 +6,10 @@ public class PropDecay : MonoBehaviour
 {
     private int interactionCount;
     public bool readyForChange = false;
-
+    public bool spriteChanged = false;
     [SerializeField] private GameObject firstSprite;
     [SerializeField] private GameObject secondSprite;
-    [SerializeField] private int spriteNum;
+    //[SerializeField] private int spriteNum;
 
 
     private void Start()
@@ -20,13 +20,14 @@ public class PropDecay : MonoBehaviour
 
         interactionCount = 0;
         readyForChange = false;
+        spriteChanged = false;
     }
     
 
     public void ReadyForChange()
     {
         readyForChange = true;
-
+        StartCoroutine(SpriteChange());
 
     }
 
@@ -37,5 +38,6 @@ public class PropDecay : MonoBehaviour
         yield return new WaitForSeconds(2f);
         firstSprite?.SetActive(false);
         secondSprite?.SetActive(true);
+        spriteChanged = true;
     }
 }

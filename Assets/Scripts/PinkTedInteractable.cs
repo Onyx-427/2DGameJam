@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ArcadeInteraction : MonoBehaviour, IInteractable
+public class PinkTedInteractable : MonoBehaviour, IInteractable
 {
     public bool isInteracted;
     [SerializeField] private TalkingScript talkingScript;
@@ -9,21 +9,23 @@ public class ArcadeInteraction : MonoBehaviour, IInteractable
     {
         return true;
     }
+
     public void Interact(GameObject interactor)
     {
         isInteracted = !isInteracted;
         if (propDecay.spriteChanged)
         {
-            talkingScript.StartDialogue( new string[] { "Ummmm..... wasn't there two arcade machines here?" });
+            talkingScript.StartDialogue( new string[] { "Uh... that's a little creepy, wasn't this teddy bear" });
         }
         else
         {
-            talkingScript.StartDialogue ( new string[] { "Nice arcade machines... " });
+            talkingScript.StartDialogue( new string[] { "Cute teddy bears... " });
         }
     }
 
     public void GetInteractPrompt()
     {
-
+        
     }
+
 }

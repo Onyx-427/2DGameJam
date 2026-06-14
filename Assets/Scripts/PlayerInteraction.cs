@@ -65,23 +65,17 @@ public class PlayerInteraction : MonoBehaviour
 
             lastInteractable = currentInteractable;
         }
-        
     }
-
-    
 
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("Trigger exit with: " + other.name);
         if (other.CompareTag("Prop"))
         {
-            PropDecay decay = other.GetComponent<PropDecay>();
-            if (decay != null && decay.readyForChange)
-            {
-                decay.StartCoroutine(decay.SpriteChange());
-            }
-            talkingUI.SetActive(false);
+            PlayerInteractionUI.instance.StartCoroutine(PlayerInteractionUI.instance.CloseUI());
         }
     }
+
+
 
 }
