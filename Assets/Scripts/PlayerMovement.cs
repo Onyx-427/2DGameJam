@@ -6,41 +6,32 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private Animator animator;
-
+    [SerializeField] private TalkingScript talkingScript;
+    [SerializeField] private Rigidbody2D rb;
+    private Vector2 moveInput;
     private void Update()
     {
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+        
+        moveInput = new Vector2(x, y).normalized;
 
-        Vector2 moveDirection = new Vector2(x, y).normalized;
+        animator.SetBool("WalkingLeft", x < 0);
+        animator.SetBool("WalkingRight", x > 0);
+        animator.SetBool("WalkingUp", y > 0 && Mathf.Abs(y) >= Mathf.Abs(x));
+        animator.SetBool("WalkingDown", y < 0 && Mathf.Abs(y) >= Mathf.Abs(x));
 
-        transform.position += (Vector3)moveDirection * speed * Time.deltaTime;
+        
 
-
-        //Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //Vector2 direction = mousePosition - (Vector2)transform.position;
-
-        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        animator.SetBool("WalkingLeft", false);
-        animator.SetBool("WalkingRight", false);
-        animator.SetBool("WalkingUp", false);
-        animator.SetBool("WalkingDown", false);
-
-        if (x == 0 && y == 0)
-        {
-            //danimator.SetBool("IdleSide", true);
-        }
-
-        else if (Mathf.Abs(x) > Mathf.Abs(y))
+        if (Mathf.Abs(x) > Mathf.Abs(y))
         {
             if (x < 0)
             {
                 transform.rotation = Quaternion.Euler(0, -180, 0);
                 animator.SetBool("WalkingLeft", true);
             }
-            else
+            else if (x > 0)
             { 
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 animator.SetBool("WalkingRight", true);
@@ -56,5 +47,19 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    
+    private void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + moveInput * speed * Time.fixedDeltaTime);
+
+        if (talkingScript.introTalking)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        }
+    }
+
 }

@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1749531293712545343}
-  - component: {fileID: 8361376271527315722}
-  - component: {fileID: 399971951402154334}
   - component: {fileID: 3070535292112385743}
   m_Layer: 0
   m_Name: Prop
@@ -36,34 +34,6 @@ Transform:
   - {fileID: 2111995955933351073}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8361376271527315722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678074802379910380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4befd5a5a8b5b3f4a91b9f20de2fafcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PropInteraction
---- !u!114 &399971951402154334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678074802379910380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80e7398f6373e0649b65cc48cbae919b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PropDecay
-  readyForChange: 0
-  firstSprite: {fileID: 6619091407675486904}
-  secondSprite: {fileID: 6048694208862255385}
-  spriteNum: 0
 --- !u!58 &3070535292112385743
 CircleCollider2D:
   m_ObjectHideFlags: 0

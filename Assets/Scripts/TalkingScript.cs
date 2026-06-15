@@ -1,26 +1,26 @@
 using System.Collections;
 using TMPro;
-using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TalkingScript : MonoBehaviour
+public class TalkingScript : MonoBehaviour, GameState
 {
     public TextMeshProUGUI text;
     private bool showingText = false;
     [SerializeField] private float letterDelay = .1f;
     [SerializeField] private GameObject talkingUI;
     [SerializeField] private string[] lines;
-    private bool introTalking;
-
+    public bool introTalking;
     private int currentLine = 0;
     private Coroutine typingCoroutine;
-
+    [SerializeField] private GameObject endText;
     void Start()
     {
+        introTalking = true;
         talkingUI.SetActive(true);
         StartDialogue(new string[]
         {
-            "Ugh, where am I?...",
+            "Ugh, where am I?... (Press SPACE to continue)",
             "I have such a bad headache...",
             "My memory's all fuzzy...",
             "Why am I still here?...",
@@ -30,7 +30,7 @@ public class TalkingScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             AdvanceDialogue();
         }
@@ -99,9 +99,66 @@ public class TalkingScript : MonoBehaviour
         showingText = false;
     }
 
-    private void EndDialogue()
+    public void EndDialogue()
     {
         text.text = "";
         talkingUI.SetActive(false);
+        if (introTalking)
+        {
+            introTalking = false;
+        }
+        if (PlayerInteraction.instance.interactionCount == 10)
+        {
+            EnemyManager.instance.firstChange();
+            introTalking = true;
+            PlayerInteraction.instance.interactionCount = 0;
+            PlayerInteraction.instance.interactedObjects.Clear();
+        }
+        if (EnemyManager.instance.smallChanges && PlayerInteraction.instance.interactionCount == 6)
+        {
+            introTalking = true;
+            EnemyManager.instance.firstMajorChange();
+            PlayerInteraction.instance.interactionCount = 0;
+            PlayerInteraction.instance.interactedObjects.Clear();
+        }
+        if (EnemyManager.instance.majorChanges && PlayerInteraction.instance.interactionCount == 5)
+        {
+            introTalking = true;
+            EnemyManager.instance.firstBloodChange();
+            PlayerInteraction.instance.interactionCount = 0;
+            PlayerInteraction.instance.interactedObjects.Clear();
+        }
+        if (EnemyManager.instance.bloodChanges && PlayerInteraction.instance.interactionCount == 1)
+        {
+            introTalking = true;
+            EnemyManager.instance.firstShadowChange();
+            PlayerInteraction.instance.interactionCount = 0;
+            PlayerInteraction.instance.interactedObjects.Clear();
+        }
+        if (EnemyManager.instance.shadowChanges && PlayerInteraction.instance.interactionCount == 2)
+        {
+            introTalking = true;
+            CamFade.instance.StartCoroutine(CamFade.instance.FadeToBlack());
+            StartCoroutine(wait());
+            
+            
+            
+        }
+        if (GameState.gameEnded)
+        {
+            CamFade.instance.StartCoroutine(CamFade.instance.FadeToBlack() );
+            if (endText != null)
+            {
+                endText.SetActive(true);
+            }
+        }
+
+    }
+
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(2);
+        GameState.gameEnded = true;
+        SceneManager.LoadScene("GameEnd");
     }
 }

@@ -43,7 +43,7 @@ public class PlayerInteractionUI : MonoBehaviour
             c.a = startAlpha;
             for (float i = 0; i < 1; i += .2f)
             {
-                float newAlpha = Mathf.MoveTowards(startAlpha, 1, i);
+                float newAlpha = Mathf.Lerp(startAlpha, 1, i);
 
                 c.a = newAlpha;
                 t.a = newAlpha;
@@ -66,7 +66,7 @@ public class PlayerInteractionUI : MonoBehaviour
 
         for (float i = 0; i < 1f; i += .2f)
         {
-            float newAlpha = Mathf.MoveTowards(startAlpha, 0, i);
+            float newAlpha = Mathf.Lerp(startAlpha, 0f, i);
             
             c.a = newAlpha;
             t.a = newAlpha;
@@ -75,6 +75,12 @@ public class PlayerInteractionUI : MonoBehaviour
             yield return new WaitForSeconds(.05f);
 
         }
+
+        c.a = 0;
+        t.a = 0;
+        uiImage.color = c;
+        uiText.color = t;
+
         UIOpened = false;
     }
 }

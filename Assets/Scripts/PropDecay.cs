@@ -7,8 +7,8 @@ public class PropDecay : MonoBehaviour
     private int interactionCount;
     public bool readyForChange = false;
     public bool spriteChanged = false;
-    [SerializeField] private GameObject firstSprite;
-    [SerializeField] private GameObject secondSprite;
+    public GameObject firstSprite;
+    public GameObject secondSprite;
     //[SerializeField] private int spriteNum;
 
 

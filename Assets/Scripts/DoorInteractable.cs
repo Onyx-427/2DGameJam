@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
+    public bool isInteracted;
+    public bool IsInteracted => isInteracted;
     [SerializeField] private Transform cameraSpawn;
     [SerializeField] private Transform playerSpawn;
     [SerializeField] private GameObject mainCam;

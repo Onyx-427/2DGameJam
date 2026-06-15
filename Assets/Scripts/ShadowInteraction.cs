@@ -3,6 +3,7 @@ using UnityEngine;
 public class ShadowInteraction : MonoBehaviour, IInteractable
 {
     public bool isInteracted;
+    public bool IsInteracted => isInteracted;
     [SerializeField] private TalkingScript talkingScript;
     [SerializeField] private PropDecay propDecay;
     public bool canInteract(GameObject interactor)
@@ -16,16 +17,17 @@ public class ShadowInteraction : MonoBehaviour, IInteractable
     public void Interact(GameObject interactor)
     {
         isInteracted = !isInteracted;
-        if (propDecay.spriteChanged)
+        if (propDecay.spriteChanged && EnemyManager.instance.shadowChanges)
         {
-            if (EnemyManager.instance.shadowChangeCount == 0)
+            if (PlayerInteraction.instance.interactionCount == 1)
             {
-                talkingScript.StartDialogue (new string[] { "WHAT THE HELL WAS THAT... where did it go??? I swear I just saw a shadow... I feel like I'm going insane, is this even real?" });
+                propDecay.secondSprite.SetActive(false);
+                talkingScript.StartDialogue (new string[] { "WHAT THE HELL WAS THAT... where did it go??? I swear I just saw a shadow...", "I feel like I'm going insane, is this even real? (" + PlayerInteraction.instance.interactionCount + "/ 2)" });
             }
             else
             {
-                talkingScript.StartDialogue(new string[] { "WHAT THE- ANOTHER SHADOW???... wait... I've seen that teddy before... that was my toy when I was a child... no... this has to be in my head... am i dreaming??... I.... I don't understa-" });
-                EnemyManager.instance.StopAllCoroutines();
+                propDecay.secondSprite.SetActive(false);
+                talkingScript.StartDialogue(new string[] { "WHAT THE- ANOTHER SHADOW???...", "wait... I've seen that teddy before... that was my toy when I was a child...", "no... this has to be in my head... am i dreaming??... I.... I don't understa- (" + PlayerInteraction.instance.interactionCount + "/ 2)" });
             }
         }
     }
