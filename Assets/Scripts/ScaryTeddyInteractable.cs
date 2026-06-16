@@ -19,7 +19,7 @@ public class ScaryTeddyInteractable : MonoBehaviour, IInteractable
         isInteracted = !isInteracted;
         if (propDecay.spriteChanged && EnemyManager.instance.majorChanges)
         {
-            talkingScript.StartDialogue(new string[] { "OH MY- WHAT THE HELL IS THAT... there's something wrong here, this was NOT here before... (" + PlayerInteraction.instance.interactionCount + "/ 5)" });
+            talkingScript.StartDialogue(new string[] { "OH MY- WHAT THE HELL IS THAT... there's something wrong here, this was NOT here before...", "Wait... I've definitely seen this teddy bear before... (" + PlayerInteraction.instance.interactionCount + "/ 5)" });
         }
     }
 

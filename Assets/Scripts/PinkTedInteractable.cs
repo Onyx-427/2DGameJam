@@ -20,7 +20,7 @@ public class PinkTedInteractable : MonoBehaviour, IInteractable
         }
         else
         {
-            talkingScript.StartDialogue(new string[] { "Cute teddy bears... (" + PlayerInteraction.instance.interactionCount + "/ 10)" });
+            talkingScript.StartDialogue(new string[] { "Cute teddy bears...", "Seems like an awful lot of them... (" + PlayerInteraction.instance.interactionCount + "/ 10)" });
         }
     }
 

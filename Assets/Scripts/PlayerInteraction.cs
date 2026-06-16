@@ -28,18 +28,20 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F) && currentInteractable != null)
         {
+            
             GameObject interactableObject = ((MonoBehaviour)currentInteractable).gameObject;
 
             if (currentInteractable.canInteract(gameObject))
             {
-                
+                pickupSound.Play();
+
                 if (interactableObject.CompareTag("Prop") && !interactedObjects.Contains(interactableObject))
                 {
                     interactedObjects.Add(interactableObject);
                     interactionCount++;
 
                 }
-                pickupSound.Play();
+                
                 currentInteractable.Interact(gameObject);
             }
         }

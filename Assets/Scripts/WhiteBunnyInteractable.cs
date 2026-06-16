@@ -20,7 +20,7 @@ public class WhiteBunnyInteractable : MonoBehaviour, IInteractable
         }
         else
         {
-            talkingScript.StartDialogue( new string[] { "Cute bunny plush... (" + PlayerInteraction.instance.interactionCount + "/ 10)" });
+            talkingScript.StartDialogue( new string[] { "Cute bunny plush...", "Kind of a weird thing to leave here tho... (" + PlayerInteraction.instance.interactionCount + "/ 10)" });
         }
     }
 

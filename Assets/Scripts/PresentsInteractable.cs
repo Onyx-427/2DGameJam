@@ -19,7 +19,7 @@ public class PresentsInteractable : MonoBehaviour, IInteractable
         }
         else
         {
-            talkingScript.StartDialogue( new string[] { "That's odd, it looks like the birthday boy forgot to take his presents? (" + PlayerInteraction.instance.interactionCount + "/ 10)" });
+            talkingScript.StartDialogue( new string[] { "That's odd, it looks like the birthday boy forgot to take his presents?...", "Also I feel like this teddy looks familiar... (" + PlayerInteraction.instance.interactionCount + "/ 10)" });
         }
     }
 

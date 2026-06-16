@@ -14,8 +14,14 @@ public class TalkingScript : MonoBehaviour, GameState
     private int currentLine = 0;
     private Coroutine typingCoroutine;
     [SerializeField] private GameObject endText;
+    [SerializeField] private GameObject playerSprite;
+    [SerializeField] private GameObject bedSprite;
+    [SerializeField] private GameObject bedSprite2;
     void Start()
     {
+        playerSprite.SetActive(false);
+        bedSprite.SetActive(true);
+        bedSprite2.SetActive(false);
         introTalking = true;
         talkingUI.SetActive(true);
         StartDialogue(new string[]
@@ -105,7 +111,19 @@ public class TalkingScript : MonoBehaviour, GameState
         talkingUI.SetActive(false);
         if (introTalking)
         {
+            playerSprite.SetActive(true);
+            bedSprite.SetActive(false);
+            bedSprite2.SetActive(true);
             introTalking = false;
+            
+        }
+        if (GameState.gameEnded)
+        {
+            CamFade.instance.StartCoroutine(CamFade.instance.FadeToBlack());
+            if (endText != null)
+            {
+                endText.SetActive(true);
+            }
         }
         if (PlayerInteraction.instance.interactionCount == 10)
         {
@@ -114,42 +132,37 @@ public class TalkingScript : MonoBehaviour, GameState
             PlayerInteraction.instance.interactionCount = 0;
             PlayerInteraction.instance.interactedObjects.Clear();
         }
-        if (EnemyManager.instance.smallChanges && PlayerInteraction.instance.interactionCount == 6)
+        if (EnemyManager.instance != null)
         {
-            introTalking = true;
-            EnemyManager.instance.firstMajorChange();
-            PlayerInteraction.instance.interactionCount = 0;
-            PlayerInteraction.instance.interactedObjects.Clear();
-        }
-        if (EnemyManager.instance.majorChanges && PlayerInteraction.instance.interactionCount == 5)
-        {
-            introTalking = true;
-            EnemyManager.instance.firstBloodChange();
-            PlayerInteraction.instance.interactionCount = 0;
-            PlayerInteraction.instance.interactedObjects.Clear();
-        }
-        if (EnemyManager.instance.bloodChanges && PlayerInteraction.instance.interactionCount == 1)
-        {
-            introTalking = true;
-            EnemyManager.instance.firstShadowChange();
-            PlayerInteraction.instance.interactionCount = 0;
-            PlayerInteraction.instance.interactedObjects.Clear();
-        }
-        if (EnemyManager.instance.shadowChanges && PlayerInteraction.instance.interactionCount == 2)
-        {
-            introTalking = true;
-            CamFade.instance.StartCoroutine(CamFade.instance.FadeToBlack());
-            StartCoroutine(wait());
-            
-            
-            
-        }
-        if (GameState.gameEnded)
-        {
-            CamFade.instance.StartCoroutine(CamFade.instance.FadeToBlack() );
-            if (endText != null)
+            if (EnemyManager.instance.smallChanges && PlayerInteraction.instance.interactionCount == 6)
             {
-                endText.SetActive(true);
+                introTalking = true;
+                EnemyManager.instance.firstMajorChange();
+                PlayerInteraction.instance.interactionCount = 0;
+                PlayerInteraction.instance.interactedObjects.Clear();
+            }
+            if (EnemyManager.instance.majorChanges && PlayerInteraction.instance.interactionCount == 5)
+            {
+                introTalking = true;
+                EnemyManager.instance.firstBloodChange();
+                PlayerInteraction.instance.interactionCount = 0;
+                PlayerInteraction.instance.interactedObjects.Clear();
+            }
+            if (EnemyManager.instance.bloodChanges && PlayerInteraction.instance.interactionCount == 1)
+            {
+                introTalking = true;
+                EnemyManager.instance.firstShadowChange();
+                PlayerInteraction.instance.interactionCount = 0;
+                PlayerInteraction.instance.interactedObjects.Clear();
+            }
+            if (EnemyManager.instance.shadowChanges && PlayerInteraction.instance.interactionCount == 2)
+            {
+                introTalking = true;
+                CamFade.instance.StartCoroutine(CamFade.instance.FadeToBlack());
+                StartCoroutine(wait());
+
+
+
             }
         }
 
