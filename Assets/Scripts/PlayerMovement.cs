@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + moveInput * speed * Time.fixedDeltaTime);
 
-        if (talkingScript.introTalking)
+        if (talkingScript.introTalking || talkingScript.paperIntro)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
         }

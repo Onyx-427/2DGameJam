@@ -17,26 +17,38 @@ public class TalkingScript : MonoBehaviour, GameState
     [SerializeField] private GameObject playerSprite;
     [SerializeField] private GameObject bedSprite;
     [SerializeField] private GameObject bedSprite2;
+    public bool paperIntro;
+    private Scene currentScene;
+    private bool cutScene;
     void Start()
     {
-        playerSprite.SetActive(false);
-        bedSprite.SetActive(true);
-        bedSprite2.SetActive(false);
-        introTalking = true;
-        talkingUI.SetActive(true);
-        StartDialogue(new string[]
+        currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "BedScene" ) {introTalking = true;}
+        if (currentScene.name == "BedScene" || currentScene.name == "GameEnd")
         {
-            "Ugh, where am I?... (Press SPACE to continue)",
-            "I have such a bad headache...",
-            "My memory's all fuzzy...",
-            "Why am I still here?...",
-            "I should go read the piece of paper over there... (WASD to move)"
-        });
+            
+            CamFade.instance.StartCoroutine(CamFade.instance.FadeBlackTo());
+            playerSprite.SetActive(false);
+            bedSprite.SetActive(true);
+            StartCoroutine(waitonesec());
+        }
+        
+        if (currentScene.name == "Game")
+        {
+            paperIntro = true;
+            StartDialogue(new string[]
+            {
+                "What's that piece of paper over there?...",
+                "I should go read it... (Press F to Interact)"
+            });
+        }
+        
+
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !cutScene)
         {
             AdvanceDialogue();
         }
@@ -111,11 +123,12 @@ public class TalkingScript : MonoBehaviour, GameState
         talkingUI.SetActive(false);
         if (introTalking)
         {
-            playerSprite.SetActive(true);
-            bedSprite.SetActive(false);
-            bedSprite2.SetActive(true);
             introTalking = false;
-            
+            SceneManager.LoadScene("Game");
+        }
+        if (paperIntro)
+        {
+            paperIntro = false;
         }
         if (GameState.gameEnded)
         {
@@ -167,7 +180,23 @@ public class TalkingScript : MonoBehaviour, GameState
         }
 
     }
-
+    private IEnumerator waitonesec()
+    {
+        cutScene = true;
+        yield return new WaitForSeconds(2);
+        playerSprite.SetActive(true);
+        bedSprite.SetActive(false);
+        bedSprite2.SetActive(true);
+        talkingUI.SetActive(true);
+        cutScene = false;
+        StartDialogue(new string[]
+        {
+            "Ugh, where am I?... (Press SPACE to continue)",
+            "I have such a bad headache...",
+            "My memory's all fuzzy...",
+            "I guess I should get out of this room to explore... "
+        });
+    }
     private IEnumerator wait()
     {
         yield return new WaitForSeconds(2);
