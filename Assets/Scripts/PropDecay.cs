@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PropDecay : MonoBehaviour
 {
-    private int interactionCount;
     public bool readyForChange = false;
     public bool spriteChanged = false;
     public GameObject firstSprite;
@@ -18,7 +17,6 @@ public class PropDecay : MonoBehaviour
         firstSprite?.SetActive(true);
         secondSprite?.SetActive(false);
 
-        interactionCount = 0;
         readyForChange = false;
         spriteChanged = false;
     }

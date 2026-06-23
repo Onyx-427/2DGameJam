@@ -124,11 +124,14 @@ public class TalkingScript : MonoBehaviour, GameState
         if (introTalking)
         {
             introTalking = false;
-            SceneManager.LoadScene("Game");
+            Scene activeScene = SceneManager.GetActiveScene();
+            if (activeScene.name == "BedScene")
+                SceneManager.LoadScene("Game");
         }
         if (paperIntro)
         {
             paperIntro = false;
+            introTalking = true;
         }
         if (GameState.gameEnded)
         {

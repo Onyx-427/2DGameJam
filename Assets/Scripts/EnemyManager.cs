@@ -14,9 +14,6 @@ public class EnemyManager : MonoBehaviour
     private GameObject pickedObj;
     public static EnemyManager instance { get; private set; }
     private int propType;
-    private int smallChangeCount = 0;
-    private int obvChangeCount = 0;
-    private int bloodChangeCount = 0;
     public int shadowChangeCount = 0;
 
     public bool intro = true;
@@ -104,7 +101,6 @@ public class EnemyManager : MonoBehaviour
                 SoundManager.instance.PickRandomAudio();
                 decay.ReadyForChange();
                 smallProps.RemoveAt(num);
-                smallChangeCount++;
             }
         }
         if (typeObj == 1)
@@ -130,7 +126,6 @@ public class EnemyManager : MonoBehaviour
                 SoundManager.instance.PickRandomAudio();
                 decay.StartCoroutine(decay.SpriteChange());
                 bloodProps.RemoveAt(num);
-                bloodChangeCount++;
             }
         }
         
